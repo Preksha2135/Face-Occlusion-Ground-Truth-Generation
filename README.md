@@ -32,18 +32,19 @@ pip install torch torchvision numpy pillow matplotlib
 
 ### 1. Training the Model
 
-Modify dataset paths in `deeplab_for_ground_truth_image_generation.py` and run:
+Modify dataset paths in `face_occlusion_ground_truth_generation.py` and run:
 
 ```bash
-python deeplab_for_ground_truth_image_generation.py
+python face_occlusion_ground_truth_generation.py
 ```
 
 ### 2. Generating Ground Truth Masks for New Images
 
-To generate masks for a folder of images, update `input_folder` and `output_folder` in the script and run:
+Note that initially 14 ground truth images are created manually using Adobe Photoshop in order to train the model. I've given access to the same in the assets/GroundTruth. 
+To generate masks for a folder of images, update `train_image_dir`, `train_mask_dir`, `input_folder` and `output_folder` in the script and run:
 
 ```bash
-python deeplab_for_ground_truth_image_generation.py
+python face_occlusion_ground_truth_generation.py
 ```
 
 ## Model
@@ -55,7 +56,7 @@ The project uses **DeepLabV3+ with a ResNet-101 backbone**, pre-trained on COCO,
 
 ## Example Output
 
-"C:\Users\preks\Downloads\output.jpg"
+![alt text](https://github.com/Preksha2135/Face-Occlusion-Ground-Truth-Generation/blob/main/output.jpg?raw=true)
 
 ## Contributions
 
